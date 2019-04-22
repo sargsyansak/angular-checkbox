@@ -14,6 +14,7 @@ export class ServiceCheckbox {
 
   dataCheck(data) {
     this.getName(data.name).subscribe((post) => {
+      // @ts-ignore
       if (post.length === 0) {
         this.http.post('http://localhost:3000/isActive', data).subscribe((post2) => {
 
