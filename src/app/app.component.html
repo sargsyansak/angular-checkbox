@@ -10,7 +10,7 @@
       <div class="all-content">
         <div *ngFor="let delivery of deliveryTypes " class="single container d-flex justify-content-between">
           <span>{{delivery}}</span>
-          <mat-slide-toggle color="primary"></mat-slide-toggle>
+          <mat-slide-toggle [formControl]="form" (change)="inData(delivery)" color="primary"></mat-slide-toggle>
         </div>
       </div>
     </div>
@@ -21,7 +21,7 @@
       <div class="all-content">
         <div *ngFor="let order of orderGroups " class="single container d-flex justify-content-between">
           <span>{{order}}</span>
-          <mat-slide-toggle color="primary"></mat-slide-toggle>
+          <mat-slide-toggle [formControl]="form" (change)="inData(order)" color="primary"></mat-slide-toggle>
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@
       <div class="all-content">
         <div *ngFor="let module of modules" class="single container d-flex justify-content-between">
           <span>{{module}}</span>
-          <mat-slide-toggle color="primary"></mat-slide-toggle>
+          <mat-slide-toggle [formControl]="form" (change)="inData(module)" color="primary"></mat-slide-toggle>
         </div>
       </div>
     </div>
